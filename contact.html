@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title lang="fr">La Mouche Rouge</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="img/logofavicon.ico"  type="image/x-icon">
+</head>
+<body>
+  <header>
+    <h1><a href="index.html"><img src="img/logo240.png" alt="La Mouche Rouge"></a></h1>
+    <nav>
+      <ul class="main menu">
+        <li class="no-subnav">
+          <a href="index.html">Home</a>
+        </li>
+        <li class="has-subnav">
+          <a href="overons.html">Over ons</a>
+          <ul class="subnav">
+            <li><a href="overons.html#oorsprong">Oorsprong</a></li>
+            <li><a href="overons.html#focus">Focus</a></li>
+            <li><a href="overons.html#experiment">Experiment</a></li>
+            <li><a href="overons.html#leden">Leden</a></li>
+          </ul>
+        </li>
+        <li class="has-subnav">
+         <a href="voorstellingen.html">Voorstellingen</a>
+         <ul class="subnav">
+           <li ><a href="voorstellingen.html#volgendevoorstelling">Volgende voorstelling</a></li>
+           <li ><a href="voorstellingen.html#oudevoorstellingen">Vorige voorstellingen</a></li>
+         </ul>
+        </li>
+        <li class="no-subnav"><a href="reserveren.html">Reserveren</a></li>
+        <li class="no-subnav"><a href="contact.html" id="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <article>
+      <h2><strong>CONTACT</strong></h2>
+
+      <p>De voorstellingen vinden plaats in zaal Pacem in Wilsele, Leuven. De verkeerssituatie wordt door ons in de gaten gehouden qua bereikbaarheid en wordt op de website steeds <a href="index.html#laatstenieuws" class="interpage">weergegeven</a>.</p>
+      <div class="map">
+      <div id="maps" > </div>
+      <script>
+        function myMap() {
+        var mapOptions = {
+            center: new google.maps.LatLng(50.897042, 4.702429),
+            zoom: 17,
+            mapTypeId: google.maps.MapTypeId.HYBRID
+        }
+        var map = new google.maps.Map(document.getElementById("maps"), mapOptions);
+        }
+      </script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVxePIW9fD0EqqJQwHU-w9pwdXiDrSqiw&callback=myMap"></script>
+      </div>
+      <p>Heb je nog <strong>vragen</strong>? Bel ons dan zeker op het nummer: <strong>0488 28 83 85</strong>.</p>
+      <p>Of <strong>mail</strong> ons: <a href="https://www.facebook.com/La-Mouche-Rouge-377424192468276/" class="interpage"><strong>La Mouche Rouge</strong></a> !</p>
+    </article>
+  </main>
+  <footer>
+    <aside>
+      <p>
+        <img src="img/gmailicon24.jpg" alt="mailicon"><a href="mailto:theater.lamoucherouge@gmail.com">theater.lamoucherouge@gmail.com</a>
+      </p>
+      <p>
+        <img src="img/facebookicon24.jpg" alt="facebookicon"><a href="https://www.facebook.com/La-Mouche-Rouge-377424192468276/">La Mouche Rouge</a>
+      </p>
+    </aside>
+  </footer>
+
+</body>
+</html>

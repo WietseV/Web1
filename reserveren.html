@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title lang="fr">La Mouche Rouge</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="img/logofavicon.ico"  type="image/x-icon">
+</head>
+<body>
+  <header>
+    <h1><a href="index.html"><img src="img/logo240.png" alt="La Mouche Rouge"></a></h1>
+    <nav>
+      <ul class="main menu">
+        <li class="no-subnav">
+          <a href="index.html">Home</a>
+        </li>
+        <li class="has-subnav">
+          <a href="overons.html">Over ons</a>
+          <ul class="subnav">
+            <li><a href="overons.html#oorsprong">Oorsprong</a></li>
+            <li><a href="overons.html#focus">Focus</a></li>
+            <li><a href="overons.html#experiment">Experiment</a></li>
+            <li><a href="overons.html#leden">Leden</a></li>
+          </ul>
+        </li>
+        <li class="has-subnav">
+         <a href="voorstellingen.html">Voorstellingen</a>
+         <ul class="subnav">
+           <li ><a href="voorstellingen.html#volgendevoorstelling">Volgende voorstelling</a></li>
+           <li ><a href="voorstellingen.html#oudevoorstellingen">Vorige voorstellingen</a></li>
+         </ul>
+        </li>
+        <li class="no-subnav"><a href="reserveren.html" id="active">Reserveren</a></li>
+        <li class="no-subnav"><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <article>
+      <h2><strong>RESERVEREN</strong></h2>
+      <p><strong>Kan jij ook niet wachten tot het eindelijk zo ver is???</strong></p>
+      <p>Je kan nogsteeds <strong>kaartjes kopen</strong> bij onze leden, of <strong>op de dag zelf</strong> bij het binnenkomen. Maar wil je nu al zeker zijn van een plaatsje?</p>
+      <p><strong>Reserveer</strong> dan al zeker de <a href="voorstellingen.html#volgendevoorstelling" class="interpage">volgende voorstelling</a>:</p>
+
+      <form class="reserveren" method="post">
+        <fieldset>
+          <p>
+            <label for="Voornaam">Voornaam*:</label>
+            <input type="text" id="Voornaam" name="Voornaam" placeholder="jan" required>
+          </p>
+          <p>
+            <label for="Achternaam">Achternaam*:</label>
+            <input type="text" id="Achternaam" name="Achternaam" placeholder="janssens" required>
+          </p>
+          <p>
+            <label for="email">email*:</label>
+            <input type="email" id="email" name="email" placeholder="jan.janssens@email.be" required>
+          </p>
+          <p>
+            <label for="datum">Datum voorstelling*:</label>
+            <select id="datum" name="datum" required title="Datum voorstelling" >
+              <option label="empty"  selected></option>
+              <option value="zaterdag">zaterdag</option>
+              <option value="zondag">zondag</option>
+            </select>
+          </p>
+          <p>
+            <label for="#tickets">aantal tickets*:</label>
+            <input type="number" min="0" id="#tickets" name="#tickets" placeholder="#" required>
+          </p>
+        </fieldset>
+        <input type="submit" value="Reserveren" style="margin-left : 1em;">
+      </form>
+      <p>Wij houden jou op de hoogte via <strong>email</strong> en geven je nog een <strong>herinnering</strong> voor de show begint zodat je ons zeker niet mist!</p>
+    </article>
+    <figure>
+      <img src="img/groepsfoto400.jpg" alt="sfeerfoto" class="sfeerfoto" style="border-radius: 50%">
+    </figure>
+  </main>
+  <footer>
+    <aside>
+      <p>
+        <img src="img/gmailicon24.jpg" alt="mailicon"><a href="mailto:theater.lamoucherouge@gmail.com">theater.lamoucherouge@gmail.com</a>
+      </p>
+      <p>
+        <img src="img/facebookicon24.jpg" alt="facebookicon"><a href="https://www.facebook.com/La-Mouche-Rouge-377424192468276/">La Mouche Rouge</a>
+      </p>
+    </aside>
+  </footer>
+
+</body>
+</html>

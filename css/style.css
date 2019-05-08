@@ -1,0 +1,459 @@
+/*reset.css*/
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*///////////////////////////////////////////////////////////////*/
+/*/////////////////////CUSTOM CSS////////////////////////////////*/
+/*///////////////////////////////////////////////////////////////*/
+
+body {
+	background-image: url(../img/background1860.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	position: relative;
+	background-size:cover;
+}
+
+/*strong en em werkten niet meer zoals ik wou na de reset*/
+
+strong { font-weight: bold; }
+em {font-style: italic; font-size: 80%}
+
+
+															/*HEADER*/
+
+
+header {
+  display: grid;
+  grid-template-rows: auto;
+}
+
+header h1 {
+	grid-row: 1;
+	background-color: rgba(255, 255, 255, 0.82);
+	width: 100%; /*Use full grid space*/
+	max-width: initial;
+	text-align: center;
+}
+
+header a img {
+	grid-row: 1;
+	margin: auto;
+	/*align-self: auto;*/
+}
+
+/*nav*/
+
+header nav {
+	background-color: rgba(255, 255, 255, 0.82);
+	grid-row: 2;
+}
+
+header nav ul {
+  font-family: arial, sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1em;
+  justify-content: center;
+}
+
+ul li {
+  padding: 1em;
+}
+
+/*LINKS IN NAV*/
+
+nav a:link {text-decoration: none; color: #000; line-height: 1.72; font-weight: bold}
+nav a:visited {color: #000;}
+nav a:hover, nav a:focus {border-bottom: 3px solid; color: rgba(56, 20, 88, 0.75); }
+nav a:active {text-decoration: underline; color: #ac191f;}
+
+/*links of the current page*/
+
+nav a#active {color: #ac191f; border-bottom: 3px solid; }
+nav a#active:hover,nav a#active:focus {border-bottom: 3px solid; color: rgba(56, 20, 88, 0.75); ;}
+nav a#active:active {border-bottom: 3px solid; color: #ac191f; }
+
+/*DROPDOWNS*/
+
+.subnav {
+	display: none
+}
+
+.has-subnav:hover .subnav, .has-subnav:focus .subnav {
+	display: block;
+	position: absolute;
+	background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 0.75em 0.75em;
+}
+
+
+															/*MAIN*/
+
+
+main {
+  display: grid;
+}
+
+main article h3#intro {
+	visibility: hidden ;/*op home pagina ruimte laten voor een titel, maar ik vond het overbodig om ook werkelijk Intro te schrijven op de pagina, wel duidelijk voor bezoekers die met spraaksysteem werken.*/
+}
+
+main article h2 {
+	background-image: url(../img/banner.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+  text-align: right;
+  padding: 1rem;
+  font-size: 200%;
+  font-family: Georgia , serif;
+	color: #fff;
+}
+
+main article{
+	background-color: rgba(255, 255, 255, 0.82);
+}
+
+main article h3 {
+	color: #ac191f;/*rood van het logo, komt steeds opnieuw voor*/
+	padding-top: 1em;
+	padding-bottom: 0em;
+	padding-left: 0.6em;
+	font-size: 1.5rem;
+	font-family: arial, sans-serif;
+}
+
+main article p {
+  padding: 1em;
+	font-size: 1rem;
+	font-family: arial, sans-serif;
+	line-height: 1.72;
+}
+
+/*for links to other pages in articles/paragraphs*/
+
+main article a.interpage:link {
+	color: #ac191f;
+	font-weight: bold;
+}
+
+main article a.interpage:visited {
+	color: #ac191f;
+	font-weight: bold;
+}
+
+main article a.interpage:hover, main article a.interpage:focus {
+	color: rgba(56, 20, 88, 0.75);
+}
+
+div.voorstelling {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	border-top: 2px solid #000;
+}
+
+h4.titel {
+	font-size: 2.5em;
+	padding-left: 0.6em;
+	padding-top: 1em;
+}
+
+div.voorstelling img {
+	margin-top: auto;
+	margin-bottom: auto;
+	padding: 1em;
+	position: static;
+	align-self: flex-start;
+}
+
+div.voorstelling p {
+	width: 50%;
+	padding: 1.5em;
+	font-size: 1rem;
+	font-family: arial, sans-serif;
+	line-height: 1.72;
+}
+
+
+																/*IMAGES*/
+
+
+main figure {
+	background-color: rgba(255, 255, 255, 0.82);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+figure img.sfeerfoto {
+	width: 240px;/*voor mobiele versie kleine foto, in @media wordt dit vergroot*/
+	margin: auto;
+	padding: 1em;
+}
+
+main figure img.foto1 {
+	display: block;
+	border-radius: 50%;
+}
+
+main figure img.foto2 {
+	display: none;
+	border-radius: 50%;
+}
+
+main figure div.leden h4{
+	padding: 0.5em;
+ 	text-align: center;
+	font-size: 1.3em;
+	font-family: arial, sans-serif;
+}
+
+main figure div.leden {
+	padding: 1em;
+	margin: auto;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+
+}
+
+
+															/*MAP*/
+
+
+main div.map {
+	padding: 2em;
+}
+
+div#maps {
+	width: 180px;
+	height: 180px;
+	margin: auto;
+	background: #fff;
+}
+
+
+															/*FOOTER*/
+
+
+footer {
+	display: grid;
+}
+
+footer aside {
+	border-top: 1px solid #000;
+	background-color: rgba(255, 255, 255, 0.82);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+footer p {
+	font-family: arial,sans-serif;
+  padding: 1em;
+	color: #fff;
+	text-align: center;
+	/*background-color: rgba(255, 255, 255, 0.82);*/
+}
+
+footer p img {
+	vertical-align: middle;
+}
+
+
+													/*CONTACTLINKS*/
+
+
+footer a:link {text-decoration: underline; color: #000; line-height: 1.72; margin-left: 0.5em;}
+footer a:visited {color: #000;}
+footer a:focus { text-decoration: none; color: #ac191f; font-size: 1.1rem;}
+footer a:active {text-decoration: underline; color: #000;}
+
+
+/*///////////////////////////////////////////////////////////////*/
+/*////////////////////////////@media/////////////////////////////*/
+/*///////////////////////////////////////////////////////////////*/
+
+
+@media screen and (min-width: 400px){
+	main, footer, header{
+	  grid-template-rows: auto;
+		grid-template-columns: 10% 1fr 10%;
+	}
+
+	header nav, header a img, header h1 {
+		grid-column: 2;
+	}
+
+	footer aside {
+		grid-column: 2;
+	}
+
+	main article {
+		grid-row: 1;
+		grid-column: 2;
+	}
+
+	main div.map {
+		grid-row: 2;
+		grid-column: 2;
+		padding: 2em;
+		margin: auto;
+	}
+
+	main figure {
+		grid-row: 2;
+		grid-column: 2;
+	}
+
+	/*main aside{
+		grid-row: 3;
+		grid-column: 2;
+
+	}*/
+}
+
+@media screen and (min-width: 600px){
+	main,footer, header {
+		grid-template-columns: 18% 1fr 18%;
+	}
+
+  main article h2 {
+		text-align: right;
+		grid-column: 1
+	}
+
+	main article h3 {
+		grid-row: 1;
+		grid-column: 2;
+	}
+
+  main article p {
+		grid-row: 1;
+		grid-column: 2;
+	}
+
+	figure img.sfeerfoto {
+		width: 320px;
+	}
+
+	footer {
+		justify-content: center;
+	}
+
+	footer aside {
+		border-top: 0px solid #000;
+	}
+
+	footer p {
+		border-top: 1px solid #000;
+	}
+
+	div#maps {
+		width: 240px;
+		height: 240px;
+		background: #fff;
+	}
+
+}
+
+@media screen and (min-width: 690px){
+	figure img.sfeerfoto {
+		width: 400px;
+	}
+
+	div#maps {
+		width: 400px;
+		height: 400px;
+		background: #fff;
+	}
+}
+
+@media screen and (min-width: 1200px){
+
+	main,footer,header {
+		grid-template-columns: 22% 1fr 22%;
+	}
+
+  main article h2 {
+		text-align: right;
+	}
+
+  main article {
+    grid-template-columns: auto 32em auto;
+  }
+
+  main article p {
+		grid-row: 1;grid-column: 2/3;
+	}
+
+}
+
+@media screen and (min-width: 1390px){
+
+	main,footer,header {
+		grid-template-columns: 26% 1fr 26%;
+	}
+
+	main figure div.leden {
+		justify-content: flex-start;
+		text-align: left;
+		align-content: flex-start;
+	}
+
+	main figure div.leden img.foto1 {
+		display: none;
+	}
+
+	main figure div.leden img.foto2 {
+		display: flex;
+	}
+}
